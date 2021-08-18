@@ -18,16 +18,21 @@ export default function App() {
         <Text>Size Comparisons</Text>
 
         {/* top red box */}
-        <View style={styles.flex1}>
+        <View style={styles.orangeBox}>
           <Text>{`phone width = ${windowWidth}`}</Text>
           <Text> {`phone height = ${windowHeight}`} </Text>
           <Text> {`normalized unit = ${normalizedUnit}`} </Text>
         </View>
 
         {/* bottom blue box */}
-        <View style={styles.flex2}>
+        <View style={styles.lightBlue}>
           <Text style={{ color: 'white' }}>
-            {`hardcoded size = 64`}
+            {`72 px`}
+          </Text>
+        </View>
+        <View style={styles.darkBlue}>
+          <Text style={{ color: 'white' }}>
+            {`72 nu`}
           </Text>
         </View>
 
@@ -71,17 +76,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  flex1: {
+  orangeBox: {
     flex: 1,
     width: windowWidth,
     backgroundColor: '#e88161',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  flex2: {
+  lightBlue: {
     flex: 1,
-    width: 64,
-    backgroundColor: 'blue',
+    width: 72,
+    backgroundColor: '#4060c2',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  darkBlue: {
+    flex: 1,
+    width: 72 * normalizedUnit,
+    backgroundColor: '#152b6b',
     alignItems: 'center',
     justifyContent: 'center',
   },
